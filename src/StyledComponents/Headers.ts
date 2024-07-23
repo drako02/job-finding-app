@@ -3,7 +3,7 @@ import UserTypeTabItems from "../Components/UserTypeTabItems.tsx";
 
 export const LandingHeader = styled.div`
     width: 100%;
-    height: 19%;
+    height: 20%;
     display: flex;
     flex-direction: column;
 `;

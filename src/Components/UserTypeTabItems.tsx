@@ -5,9 +5,11 @@ const StyledTabItems = styled.ul`
     font-size: 14px;
     width: 321px;
     height: 65.2%;
+    //padding: 0;
     
     .nav-item{
         height: 100%;
+        //padding: 0;
     }
     .nav-link{
         height: 100%;
@@ -15,6 +17,7 @@ const StyledTabItems = styled.ul`
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 7.6%  ;
     }
     .nav-link.active {
         background-color: white;
