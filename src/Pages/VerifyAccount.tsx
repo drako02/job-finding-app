@@ -11,7 +11,7 @@ const VerifyAccount = () => {
 
     return(
         <div className=" h-[100vh] flex flex-col justify-start items-center">
-            <Title/>
+            <Title hide/>
 
             <div className="w-[106px] h-[128px] mt-[26.7%]">
                 <img src={verify}/>

@@ -1,7 +1,9 @@
+import Title from "../Components/Title.tsx";
+
 const CareerStatus = () => {
     return(
         <div>
-            Career Status
+            <Title hide/>
         </div>
     )
 }
