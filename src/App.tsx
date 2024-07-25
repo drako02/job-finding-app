@@ -17,8 +17,8 @@ function App() {
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/signup" element={<Layout/>}>
-                  <Route path="/account-type" element={<AccountType/>}/>
-                  <Route path="/create-account" element={<CreateAccount/>}/>
+                  <Route path="account-type" element={<AccountType/>}/>
+                  <Route path="create-account" element={<CreateAccount/>}/>
               </Route>
           </Routes>
       </>
