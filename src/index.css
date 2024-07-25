@@ -14,3 +14,52 @@
 .flex-col.border-2.absolute {
   top: 20.77%;
 }
+
+.createaccountform *{
+  display: flex;
+  flex-direction: column;
+}
+
+.createaccountform div div{
+  justify-content: space-between;
+  height: 13%
+}
+
+.createaccountform div div div{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 66.6%;
+  border-width: 1px;
+  border-color: #E8E8E8;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.createaccountform div div div input{
+  height: 100%;
+  width: 100%;
+  padding: 0 5%;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 150%;
+  /*border-width: 1px;*/
+  /*border-color: #E8E8E8;*/
+  /*border-radius: 2px;*/
+}
+
+.createaccountform div div div select{
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  /*padding: 1%;*/
+  text-align: center;
+  vertical-align: center;
+}
+
+.createaccountform label{
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 140%;
+}
+
+
