@@ -18,12 +18,15 @@ const StyledTabItems = styled.ul`
         justify-content: center;
         align-items: center;
         padding: 7.6%  ;
+        color: black;
+        font-weight: normal;
     }
     .nav-link.active {
         background-color: white;
-        //height: 100%;
         color: black;
+        //height: 100%;
         box-shadow:  0 0 4px 0px rgba(0, 25, 39, 0.15);
+        font-weight: bold;
     }
 `;
 

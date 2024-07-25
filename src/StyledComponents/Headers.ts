@@ -10,9 +10,11 @@ export const LandingHeader = styled.div`
 
 export const TitleBar = styled.div`
     width: 100%;
-    height: 6.4%;
+    height: 5.3%;
     display: flex;
     padding: 0 4.4%;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const LandingTitleBar = styled(TitleBar)`

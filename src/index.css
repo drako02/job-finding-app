@@ -1,7 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root{
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+/*nav button*/
+.flex-col.border-2.absolute {
+  top: 20.77%;
 }
