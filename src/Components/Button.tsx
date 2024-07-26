@@ -11,7 +11,7 @@ export default function Button({className, children, type, onClick}: ButtonProps
     const navigate = useNavigate();
 
     return(
-        <button onClick={onClick} type={type} className= {`h-[48px] flex justify-center items-center text-[14px] font-bold leading-[140%] bg-black rounded-[2px] border-0 ${className} `}>
+        <button onClick={onClick} type={type} className= {`h-[48px] flex justify-center items-center text-[14px] font-bold text-white leading-[140%] bg-black rounded-[2px] border-0 ${className} `}>
             {children}
         </button>
     )

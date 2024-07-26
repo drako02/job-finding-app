@@ -10,6 +10,7 @@ import GlobalStyle from "./StyledComponents/GlobalStyle.ts";
 import CreateAccount from "./Pages/CreateAccount.tsx";
 import VerifyAccount from "./Pages/VerifyAccount.tsx";
 import CareerStatus from "./Pages/CareerStatus.tsx";
+import SetUpProfile from "./Pages/SetUpProfile.tsx";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               </Route>
               <Route path="/logged-in" element={<Layout/>}>
                   <Route path="select-career-status" element={<CareerStatus/>}/>
+                  <Route path="set-up-profile" element={<SetUpProfile/>}/>
               </Route>
           </Routes>
       </>

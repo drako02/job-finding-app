@@ -1,0 +1,56 @@
+import React from "react";
+import edu from "../assets/edu.svg";
+import experience from "../assets/work.svg";
+import skills from "../assets/skill.svg";
+import cert from "../assets/cert.svg";
+import accom from "../assets/acco.svg";
+import resume from "../assets/resume.svg";
+import add from "../assets/plus.svg"
+
+
+interface Props {
+    className?:string,
+    name:"education"|"experience"|"skills"|"certifications"|"accomplishments"|"resume"
+
+}
+const ProfileCompletionCard = ({className, name}:Props) => {
+    return(
+        <div className={`${className} relative flex justify-between items-start h-[10%]`}>
+            <div className="w-[24px] h-[24px]">
+                <img src={name==="education"? edu
+                    :name==="certifications"? cert
+                        :name==="resume"? resume
+                            :name==="skills"? skills
+                                :name==="experience"? experience
+                                    :name==="accomplishments"? accom:""
+                }/>
+            </div>
+            <div className="w-[87%] h-[100%] flex flex-col justify-between">
+                <div className="w-[100%] h-[46%%] flex justify-between">
+                    {name==="education"? "Education"
+                        :name==="certifications"? "Certifications"
+                            :name==="resume"? "Upload Resume"
+                                :name==="skills"? "Interests & Skills"
+                                    :name==="experience"? "Work Experience"
+                                        :name==="accomplishments"? "Accomplishments":""
+                    }
+
+                    <div className="w-[24px] h-[24px]">
+                        <img src={add}/>
+                    </div>
+                </div>
+                <span> {name==="education"? "School info, field of study"
+                    :name==="certifications"? "Certifications worth highlighting"
+                        :name==="resume"? "CV, portfolio"
+                            :name==="skills"? "Career interests and skillset"
+                                :name==="experience"? "Where you’ve worked, your role"
+                                    :name==="accomplishments"? "Personal achievement & impact":""}
+                </span>
+
+            </div>
+
+
+        </div>
+    )
+}
+export default ProfileCompletionCard;
