@@ -4,8 +4,8 @@ import Button from "../Button.tsx";
 
 const WorkExperienceForm = () => {
     return (
-        <form className="w-[100%] h-[440px] flex flex-col items-center py-[5.3%]">
-            <div className="flex flex-col flex-1 justify-between">
+        <form className="w-[100%] h-[440px] flex flex-col items-center py-[5.3%] px-[6.6%]">
+            <div className="flex flex-col flex-1 justify-between w-[100%]">
                 <Input htmlFor="jobtitle" type="text" name="jobtitle"> Job Title</Input>
                 <DropdownInput htmlFor="company" name="company" holder="Search company" id="company">
                     Company
