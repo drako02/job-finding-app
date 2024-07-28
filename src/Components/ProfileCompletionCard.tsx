@@ -11,9 +11,10 @@ import add from "../assets/plus.svg"
 interface Props {
     className?:string,
     name:"education"|"experience"|"skills"|"certifications"|"accomplishments"|"resume"
+    onClick?: () => void
 
 }
-const ProfileCompletionCard = ({className, name}:Props) => {
+const ProfileCompletionCard = ({className, name, onClick}:Props) => {
     return(
         <div className={`${className} relative flex justify-between items-start h-[10%]`}>
             <div className="w-[24px] h-[24px] flex justify-center items-center">
@@ -35,7 +36,7 @@ const ProfileCompletionCard = ({className, name}:Props) => {
                                         :name==="accomplishments"? "Accomplishments":""
                     }
 
-                    <div className="w-[24px] h-[24px] flex justify-center items-center ">
+                    <div onClick={onClick} className="w-[24px] h-[24px] flex justify-center items-center ">
                         <img  src={add} className="w-[16px] h-[16px]"/>
                     </div>
                 </div>

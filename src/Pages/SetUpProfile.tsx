@@ -6,24 +6,31 @@ import Button from "../Components/Button.tsx";
 import { useNavigate } from "react-router-dom";
 import TitleBar from "../Components/modal/TitleBar.tsx";
 import info from "../assets/info.svg"
-import TextInput from "../Components/modal/TextInput.tsx";
+import Input from "../Components/modal/Input.tsx";
+import DropdownInput from "../Components/modal/DropdownInput.tsx";
+import WorkExperienceForm from "../Components/modal/WorkExperienceForm.tsx";
+import {useState} from "react";
 
 
 
 const SetUpProfile = () => {
-    const navigate = useNavigate();
+    const [hidden, setHidden] = useState(true)
 
-    const handleButton = () => {
-        navigate("/profile");
+    // const style= "hidden";
+
+    const handleWorkExperience = () => {
+        setHidden(!hidden);
+
     }
+    const modalDisplay = hidden? "hidden": "";
 
     return(
-        <div className="h-[245.8vw]  flex flex-col justify-start items-center">
-            <div className="modal-1  fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0">
+        <div className={"h-[245.8vw]  flex flex-col justify-start items-center"}>
+            <div className={`modal-1 ${modalDisplay} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
 
                 <div className="modal-content w-[100%] h-[585px] bg-white top-[10%] rounded-[4px]">
 
-                    <TitleBar> Add Work Experience</TitleBar>
+                    <TitleBar onClick={handleWorkExperience}> Add Work Experience</TitleBar>
                     <div className=" h-[72px] flex justify-between items-center bg-[rgba(49,156,255,0.1)] ">
                         <div className="w-[60%] h-[40px] flex justify-start gap-[3.8%] items-center ml-[6.6%]">
                             <div className="w-[24px] h-[24px] flex justify-center items-center" >
@@ -35,10 +42,7 @@ const SetUpProfile = () => {
 
                     </div>
 
-                    <div className="w-[100%] h-[440px] flex flex-col items-center py-[5.3%]">
-                        <TextInput htmlFor="jobtitle" type="jobtitle" name="jobtitle"> Job Title</TextInput>
-                    </div>
-
+                    <WorkExperienceForm/>
                 </div>
 
             </div>
@@ -46,7 +50,7 @@ const SetUpProfile = () => {
 
             <Title className="mb-[6.7%]"/>
             
-            Set up profile
+            <p className="w-[100%] px-[6.7%] text-[18px] font-bold leading-[140%]"> Set up profile </p>
             <div style={{backgroundImage: `url(${smile})`, backgroundSize: 'auto 100%'}} className="bg-left h-[10%] w-[86.7%] my-[6.7%] bg-no-repeat bg-[#0B8659] flex justify-between items-center px-[5%] ">
                 <span className="text-[16px] text-white font-bold leading-[150%]"> Profile <br/> Completion</span>
                 <div className="h-[56px] w-[56px]">
@@ -55,7 +59,7 @@ const SetUpProfile = () => {
                 </div>
             </div>
             <div className="w-[86.7%] h-[58%] flex flex-col justify-between gap-[3.9%]">
-                <ProfileCompletionCard name="education"/>
+                <ProfileCompletionCard name="education" onClick={handleWorkExperience}/>
                 <div className="flex justify-end"> <hr className="bg-[#E8E8E8] w-[87%] h-[1px]"/></div>
                 <ProfileCompletionCard name="experience"/>
                 <div className="flex justify-end"> <hr className="bg-[#E8E8E8] w-[87%] h-[1px]"/></div>
