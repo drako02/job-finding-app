@@ -1,6 +1,6 @@
-import Input from "./Input.tsx";
-import DropdownInput from "./DropdownInput.tsx";
-import Button from "../Button.tsx";
+import Input from "../Components/modal/Input.tsx";
+import DropdownInput from "../Components/modal/DropdownInput.tsx";
+import Button from "../Components/Button.tsx";
 
 const WorkExperienceForm = () => {
     return (
