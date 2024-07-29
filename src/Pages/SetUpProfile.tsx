@@ -27,14 +27,15 @@ const SetUpProfile = () => {
     // const modalDisplay = hidden? "hidden": "";
 
     const [modals, setModals] = useState({experience:true, education:true});
+    typeof modals
 
-    const handleModal = (modalName) => {
+    const handleModal = (modalName:keyof typeof modals) => {
         setModals((prevModals) => (
             {...prevModals, [modalName]:!prevModals[modalName]}
         ))
     }
 
-    const modalDisplay = (modalName) => (modals[modalName]? "hidden":"");
+    const modalDisplay = (modalName:keyof typeof modals) => (modals[modalName]? "hidden":"");
 
     return(
         <div className={"h-[245.8vw]  flex flex-col justify-start items-center"}>
