@@ -1,5 +1,8 @@
 import {styled} from "styled-components";
 
+const breakpoints = {md: "768px", lg:"1024px"}
+const media = {md:`(min-width: ${breakpoints.md})`, lg:`(min-width:${breakpoints.lg})`}
+
 //Landing Page
  export const InputHolder = styled.div`
   height: 54.2%;
@@ -8,6 +11,16 @@ import {styled} from "styled-components";
   justify-content: flex-start;
   align-items: center;
   gap: 4%;
+
+  @media ${media.md} {
+   width: 50.8%;
+   height: 100%;
+  }
+
+  @media ${media.lg} {
+   
+  width: 62.3%;
+  }
   
  `;
 
@@ -32,4 +45,6 @@ import {styled} from "styled-components";
   &::-ms-input-placeholder{
    font-size: 16px;
   }
+
+  
  `;

@@ -50,7 +50,7 @@ const Home = () => {
 
             <LandingBody className="">
                 {isOpen && (
-                    <div className="flex flex-col justify-between gap-1 items-center absolute border-2 right-[10px]  origin-top-right">
+                    <div className=" flex flex-col justify-between gap-1 items-center absolute border-2 right-[10px]  origin-top-right">
                         <div> Jobs </div>
                         <div>Mentorship</div>
                         <div> Training</div>
@@ -58,11 +58,11 @@ const Home = () => {
                         <LoginButton/>
                     </div>
                 )}
-                <WelcomeArea>
+                <WelcomeArea className="md:!hidden">
                     Discover a greater you
                     <div>We help you <span>find the perfect job </span> </div>
                 </WelcomeArea>
-                <CtaArea>
+                <CtaArea className="md:!hidden">
                     <InputContainer>
                         <InputHolder>
                             <SearchIcon src={search}/>
@@ -75,6 +75,23 @@ const Home = () => {
                     <CtaButton> <img src={arrow} alt="arrow"/></CtaButton>
 
                 </CtaArea>
+
+                <div className="hidden md:flex flex-col justify-between h-[34.6%] w-[64.5%] lg:h-[36.6%]  lg:w-[44.2%] ">
+                    <WelcomeArea>
+                        Discover a greater you
+                        <div>We help you <span>find the perfect job </span> </div>
+                    </WelcomeArea>
+                    <CtaArea>
+                        <InputHolder>
+                            <SearchIcon src={search}/>
+                            <SearchInput/>
+                        </InputHolder>
+                        <Dropdown/>
+                        <CtaButton> <img src={arrow} alt="arrow"/></CtaButton>
+
+                    </CtaArea>
+                </div>
+
             </LandingBody>
 
 

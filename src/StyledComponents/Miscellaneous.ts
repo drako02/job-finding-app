@@ -1,5 +1,9 @@
 import {styled} from "styled-components";
 
+const breakpoints = {md: "768px", lg:"1024px"}
+const media = {md:`(min-width: ${breakpoints.md})`, lg:`(min-width:${breakpoints.lg})`}
+
+
 export const WelcomeArea = styled.div`
     //position: relative;
     //top: 20.4%;
@@ -20,6 +24,18 @@ export const WelcomeArea = styled.div`
             color: #0B8659;
         }
     }
+
+    @media ${media.md} {
+        height: 50.3%;
+        
+        div{
+            
+        }
+    }
+
+    @media ${media.lg} {
+        height: 50.8%;
+    }
 `;
 
 export const  CtaArea = styled.div`
@@ -29,7 +45,21 @@ export const  CtaArea = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-;
+
+    @media ${media.md} {
+        flex-direction: row;
+        height: 21.6%;
+        width: 100%;
+        //
+        background-color: white;
+        border-radius: 40px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    @media ${media.lg} {
+        height: 21.5%;
+    }
 `;
 
 export const InputContainer = styled.div`
