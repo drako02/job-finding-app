@@ -11,6 +11,8 @@ import DropdownInput from "../Components/modal/DropdownInput.tsx";
 import WorkExperienceForm from "../Forms/WorkExperienceForm.tsx";
 import {useState} from "react";
 import EducationForm from "../Forms/EducationForm.tsx";
+import ResumeForm from "../Forms/ResumeForm.tsx";
+import AccomplishmentForm from "../Components/modal/AccomplishmentForm.tsx";
 
 
 
@@ -26,8 +28,7 @@ const SetUpProfile = () => {
     // }
     // const modalDisplay = hidden? "hidden": "";
 
-    const [modals, setModals] = useState({experience:true, education:true});
-    typeof modals
+    const [modals, setModals] = useState({experience:true, education:true, resume:true, accomplishment:true});
 
     const handleModal = (modalName:keyof typeof modals) => {
         setModals((prevModals) => (
@@ -39,7 +40,8 @@ const SetUpProfile = () => {
 
     return(
         <div className={"h-[245.8vw]  flex flex-col justify-start items-center"}>
-            <div className={`modal-1 ${modalDisplay("experience")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
+            <div
+                className={`modal-1 ${modalDisplay("experience")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
 
                 <div className="modal-content w-[100%] h-[585px] bg-white top-[10%] rounded-[4px]">
 
@@ -61,11 +63,32 @@ const SetUpProfile = () => {
 
             </div>
 
-            <div className={`modal-2 ${modalDisplay("education")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
+            <div
+                className={`modal-2 ${modalDisplay("education")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
 
                 <div className="modal-content w-[100%] h-[569px] bg-white top-[10%] rounded-[4px]">
                     <TitleBar onClick={() => handleModal("education")}> Add Education </TitleBar>
                     <EducationForm/>
+                </div>
+
+            </div>
+
+            <div
+                className={`modal-3 ${modalDisplay("resume")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
+
+                <div className="modal-content w-[100%] h-[569px] bg-white top-[10%] rounded-[4px]">
+                    <TitleBar onClick={() => handleModal("resume")}> Upload Resume </TitleBar>
+                    <ResumeForm/>
+                </div>
+
+            </div>
+
+            <div
+                className={`modal-4 ${modalDisplay("accomplishment")} fixed z-[1] w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] top-0 left-0`}>
+
+                <div className="modal-content w-[100%] h-[440px] bg-white top-[10%] rounded-[4px]">
+                    <TitleBar onClick={() => handleModal("accomplishment")}> Add Accomplishments </TitleBar>
+                    <AccomplishmentForm/>
                 </div>
 
             </div>
@@ -99,11 +122,11 @@ const SetUpProfile = () => {
                 <div className="flex justify-end">
                     <hr className="bg-[#E8E8E8] w-[87%] h-[1px]"/>
                 </div>
-                <ProfileCompletionCard name="accomplishments"/>
+                <ProfileCompletionCard name="accomplishments" onClick={() => handleModal("accomplishment")}/>
                 <div className="flex justify-end">
                     <hr className="bg-[#E8E8E8] w-[87%] h-[1px]"/>
                 </div>
-                <ProfileCompletionCard name="resume"/>
+                <ProfileCompletionCard name="resume" onClick={() => handleModal("resume")}/>
 
 
             </div>

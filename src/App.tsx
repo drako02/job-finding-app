@@ -11,6 +11,7 @@ import CreateAccount from "./Pages/CreateAccount.tsx";
 import VerifyAccount from "./Pages/VerifyAccount.tsx";
 import CareerStatus from "./Pages/CareerStatus.tsx";
 import SetUpProfile from "./Pages/SetUpProfile.tsx";
+import 'react-quill/dist/quill.snow.css';
 
 function App() {
 

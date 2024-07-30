@@ -3,7 +3,7 @@ import {Children, ReactElement, ReactNode} from "react"
 type Props ={
     htmlFor: string
     name: string
-    id?: string
+    id: string
     children?: ReactNode
     holder?: string
     className?:string

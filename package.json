@@ -14,12 +14,16 @@
     "@heroicons/react": "^2.1.5",
     "bootstrap": "^5.3.3",
     "bootstrap-styled-components": "^1.0.1",
+    "dompurify": "^3.1.6",
+    "quill": "^2.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.25.1",
     "styled-components": "^6.1.12"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",

@@ -6,14 +6,14 @@ const WorkExperienceForm = () => {
     return (
         <form className="w-[100%] h-[440px] flex flex-col items-center py-[5.3%] px-[6.6%]">
             <div className="flex flex-col flex-1 justify-between w-[100%]">
-                <Input htmlFor="jobtitle" type="text" name="jobtitle"> Job Title</Input>
+                <Input htmlFor="jobtitle" type="text" name="jobtitle" id="jobtitle"> Job Title</Input>
                 <DropdownInput htmlFor="company" name="company" holder="Search company" id="company">
                     Company
                     <option value="flair"> Flair </option>
                 </DropdownInput>
                 <div className="flex justify-between w-[100%] h-[72px]">
-                    <Input htmlFor="startDate" type="date" name="startDate" className="w-[48.5%]"> Start Date</Input>
-                    <Input htmlFor="endDate" type="date" name="endDate" className="w-[48.5%]"> End Date</Input>
+                    <Input htmlFor="startDate" type="date" name="startDate" className="w-[48.5%]" id="startDate"> Start Date</Input>
+                    <Input htmlFor="endDate" type="date" name="endDate" className="w-[48.5%]" id="endDate"> End Date</Input>
                 </div>
                 <div className="flex justify-start items-center font-medium">
                     <input type="checkbox" className="mr-[2%] w-[24px] h-[24px]"/>

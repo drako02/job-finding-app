@@ -5,7 +5,7 @@ type Props ={
     type: HTMLInputTypeAttribute
     name: string
     value?: string
-    id?: string
+    id: string
     children?: ReactNode
     className?: string
 }
