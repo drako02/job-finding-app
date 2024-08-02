@@ -100,7 +100,7 @@ const Home = () => {
                             <SearchInput/>
                         </InputHolder>
                     </InputContainer>
-                    <InputContainer>
+                    <InputContainer className="">
                         <Dropdown/>
                     </InputContainer>
                     <CtaButton> <img src={arrow} alt="arrow"/></CtaButton>
