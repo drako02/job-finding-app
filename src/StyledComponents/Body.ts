@@ -15,12 +15,13 @@ export const LandingBody = styled.div`
     background-color: #F5F5F5;
 
     @media ${media.md} {
-        padding-top: 19%;
+        padding-top: 0;
         height: 81.6%;
     }
 
     @media ${media.lg} {
-        padding-top: 12.6%;
+        padding-top: 0;
         height: 83.5%;
+        
     }
 `;

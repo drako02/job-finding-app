@@ -3,7 +3,7 @@ import {InputHolder} from "../StyledComponents/Inputs.ts";
 
 export default function Dropdown () {
     return(
-        <div className="md:w-[30%] md: lg:w-[22.6%] lg: ">
+        <div className="md:w-[33.9%] md:pl-[2.5%] lg:w-[25%] lg: md:border-l-[1px] border-[#D4D4D4] ">
             <select name="Jobs" defaultValue="jobs" className = "w-11/12 border-0 focus-visible:outline-0" title="jobs">
                 <option value="jobs" disabled > Jobs </option>
                 <option value=""> Doctor </option>

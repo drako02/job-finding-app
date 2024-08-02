@@ -26,15 +26,33 @@ export const WelcomeArea = styled.div`
     }
 
     @media ${media.md} {
+        width: 100%;
         height: 50.3%;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 108%;
+        letter-spacing: -1px;
         
         div{
-            
+            font-size: 20px;
+            line-height: 140%;
+            font-weight: bold;
+            letter-spacing: 0;
         }
     }
 
     @media ${media.lg} {
         height: 50.8%;
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 108%;
+        letter-spacing: -2px;
+        white-space: nowrap;
+        div{
+            font-size: 36px;
+            line-height: 108%;
+            font-weight: bold;
+        }
     }
 `;
 
@@ -48,12 +66,15 @@ export const  CtaArea = styled.div`
 
     @media ${media.md} {
         flex-direction: row;
-        height: 21.6%;
+        height: 43px;
         width: 100%;
+        gap: 0;
+        margin: 0;
+        padding: 0;
         //
         background-color: white;
         border-radius: 40px;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
     }
 

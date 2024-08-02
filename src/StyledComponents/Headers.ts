@@ -37,6 +37,7 @@ export const LandingTitleBar = styled(TitleBar)`
 
     @media ${media.md} {
         height: 53.7%;
+        
     }
 
     @media ${media.lg} {

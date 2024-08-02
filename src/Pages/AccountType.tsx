@@ -17,7 +17,7 @@ const AccountType = () => {
     }
 
     return(
-        <div className = "w-[100vw] h-[292vw] flex flex-col justify-start gap-[2.3%] items-center">
+        <div className = "w-[100vw] h-[148vh] flex flex-col justify-start gap-[2.3%] items-center">
             <TitleBar>
                 <Logo/>
             </TitleBar>

@@ -13,13 +13,13 @@ const media = {md:`(min-width: ${breakpoints.md})`, lg:`(min-width:${breakpoints
   gap: 4%;
 
   @media ${media.md} {
-   width: 50.8%;
+   width: 57.4%;
    height: 100%;
   }
 
   @media ${media.lg} {
    
-  width: 62.3%;
+  width: 69%;
   }
   
  `;
@@ -44,6 +44,13 @@ const media = {md:`(min-width: ${breakpoints.md})`, lg:`(min-width:${breakpoints
   }
   &::-ms-input-placeholder{
    font-size: 16px;
+  }
+
+  @media ${media.md} {
+   width: 100%;
+  }
+  @media ${media.lg} {
+   width: 100%;
   }
 
   

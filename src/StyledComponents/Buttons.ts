@@ -1,5 +1,8 @@
 import {styled} from "styled-components";
 
+const breakpoints = {md: "768px", lg:"1024px"}
+const media = {md:`(min-width: ${breakpoints.md})`, lg:`(min-width:${breakpoints.lg})`}
+
 export const StyledNavButton = styled.button`
     height: 24px;
     width: 24px;
@@ -12,6 +15,12 @@ export const StyledNavButton = styled.button`
     img{
         height: 24px;
         width: 24px;
+    }
+    @media ${media.md} {
+        
+    }
+    @media ${media.lg} {
+        display: none;
     }
 `;
 
@@ -28,5 +37,16 @@ export const CtaButton = styled.button`
     img{
         height: 24px;
         width: 24px;
+    }
+    
+    @media ${media.md} {
+        height: 40px;
+        width: 40px;   
+        margin-right: 1.5%;
+        //margin-left: auto;
+    }
+    @media ${media.lg} {
+        height: 40px;
+        width: 40px;
     }
 `;

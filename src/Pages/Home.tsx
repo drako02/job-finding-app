@@ -19,6 +19,10 @@ import {Route, Routes, useNavigate} from "react-router-dom";
 import Layout from "./Layout.tsx";
 import AccountType from "./AccountType.tsx";
 import React, {useState} from "react";
+import Button from "../Components/Button.tsx";
+import jobsIcon from "../assets/jobicon.svg";
+import mentorshipIcon from "../assets/membershipIcon.svg";
+import trainingsIcon from "../assets/trainingsIcon.svg";
 
 const Home = () => {
     const[isOpen, setIsOpen] = useState(false);
@@ -31,7 +35,7 @@ const Home = () => {
 
 
     return(
-        <div className="h-[100vh] ">
+        <div className="h-[100vh] lg:h-[110vh]">
             <Image1 src={image1}/>
             <Image2 src={image2}/>
             <Image3 src={image3}/>
@@ -43,18 +47,45 @@ const Home = () => {
                 </UserTypeBar>
                 <LandingTitleBar>
                     <Logo/>
-                    <StyledNavButton onClick={toggleDropdown}> <img src={navLogo}/></StyledNavButton>
+
+                    <div className="hidden lg:flex w-[30%] justify-between items-center text-[14px] font-medium leading-[140%]">
+                        <div className="flex justify-center items-center">
+                            <div className="flex justify-center items-center h-[24px] w-[24px]"><img className=" h-[20px] w-[20px] mr-[5px]" src={jobsIcon}/></div>
+
+                            Jobs
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <div className="flex justify-center items-center h-[24px] w-[24px]"><img className=" h-[20px] w-[20px] mr-[5px]" src={mentorshipIcon}/></div>
+                            Mentorship
+                        </div >
+                        <div className="flex justify-center items-center">
+                            <div className="flex justify-center items-center h-[24px] w-[24px]"><img className=" h-[20px] w-[20px] mr-[5px]" src={trainingsIcon}/></div>
+                            Trainings
+                        </div>
+
+                    </div>
+
+                    <div className="flex justify-end items-center gap-[6%]">
+                        <div className="hidden md:flex w-[172px] justify-between">
+                            <Button
+                                className="w-[83px] h-[48px] bg-white !text-black border-[1px] border-[#F5F5F5]">Login</Button>
+                            <Button onClick={() => navigate("signup/account-type")} className="w-[83px] h-[48px]">Sign up</Button>
+
+                        </div>
+                        <StyledNavButton onClick={toggleDropdown}> <img src={navLogo}/></StyledNavButton>
+                    </div>
 
                 </LandingTitleBar>
             </LandingHeader>
 
             <LandingBody className="">
                 {isOpen && (
-                    <div className=" flex flex-col justify-between gap-1 items-center absolute border-2 right-[10px]  origin-top-right">
+                    <div
+                        className=" flex flex-col justify-between gap-1 items-center absolute border-2 right-[10px]  origin-top-right">
                         <div> Jobs </div>
                         <div>Mentorship</div>
                         <div> Training</div>
-                        <LoginButton signUp />
+                        <LoginButton onClick={() => navigate("signup/account-type")} signUp />
                         <LoginButton/>
                     </div>
                 )}
@@ -76,17 +107,20 @@ const Home = () => {
 
                 </CtaArea>
 
-                <div className="hidden md:flex flex-col justify-between h-[34.6%] w-[64.5%] lg:h-[36.6%]  lg:w-[44.2%] ">
+                <div className="hidden md:flex flex-col justify-between md:w-[64.5%] lg:w-[44.2%] md:h-[34.6%] lg:h-[36.6%]  md:mt-[20.4%] lg:mt-[12.6%] z-0">
                     <WelcomeArea>
                         Discover a greater you
                         <div>We help you <span>find the perfect job </span> </div>
                     </WelcomeArea>
                     <CtaArea>
-                        <InputHolder>
-                            <SearchIcon src={search}/>
-                            <SearchInput/>
-                        </InputHolder>
-                        <Dropdown/>
+                        <div className="w-[90%] flex items-center justify-end">
+                            <InputHolder>
+                                <SearchIcon src={search}/>
+                                <SearchInput/>
+                            </InputHolder>
+                            <Dropdown/>
+                        </div>
+
                         <CtaButton> <img src={arrow} alt="arrow"/></CtaButton>
 
                     </CtaArea>
