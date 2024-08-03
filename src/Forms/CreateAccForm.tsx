@@ -11,7 +11,7 @@ const CreateAccForm = () => {
     }
 
     return(
-        <form className=" createaccountform flex flex-col h-[87%]  p-[0] justify-start items-center gap-[3.8%] box-border ">
+        <form className=" createaccountform flex flex-col h-[87%] sm:h-[536px]  p-[0] justify-start items-center gap-[3.8%] box-border ">
             <div className="flex flex-col flex-[1] w-[100%] justify-between m-0 gap-[4.3%]">
 
                 <div>
@@ -22,7 +22,7 @@ const CreateAccForm = () => {
 
                 </div>
 
-                <div>
+                <div className="sm:hidden">
                     <label htmlFor="dob"> Date of birth</label>
                     <div>
                         <input type="text" id="dob" name="dob"/>
@@ -30,7 +30,7 @@ const CreateAccForm = () => {
 
                 </div>
 
-                <div>
+                <div className="sm:hidden">
                     <label htmlFor="gender"> Gender</label>
                     <div className="!justify-center !items-center">
                         <select className="h-[1.5em] w-[89.7%] justify-center items-center " id="gender" name="gender">
@@ -40,6 +40,27 @@ const CreateAccForm = () => {
                         </select>
                     </div>
 
+                </div>
+                {/* @media */ }
+                <div className="media-input">
+                    <div className="">
+                        <label htmlFor="dob"> Date of birth</label>
+                        <div>
+                            <input type="text" id="dob" name="dob" />
+                        </div>
+                        
+                    </div>
+                    <div className="">
+                        <label htmlFor="gender"> Gender</label>
+                        <div className="!justify-center !items-center">
+                            <select className="h-[1.5em] w-[89.7%] justify-center items-center " id="gender" name="gender">
+                                <option value="" disabled> Select one</option>
+                                <option value="male"> Male</option>
+                                <option value="female"> Female</option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div>
